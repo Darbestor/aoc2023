@@ -15,18 +15,6 @@ impl Game {
     fn new(id: usize) -> Game {
         Game { id, sets: vec![] }
     }
-
-    // fn add_green(&mut self, balls: usize) {
-    //     self.green += balls;
-    // }
-
-    // fn add_blue(&mut self, balls: usize) {
-    //     self.blue += balls;
-    // }
-
-    // fn add_red(&mut self, balls: usize) {
-    //     self.red += balls;
-    // }
 }
 
 impl GameSet {
@@ -44,7 +32,7 @@ pub fn solve() -> Answer {
     let games: Vec<Game> = parse_input(input);
 
     Answer {
-        day: 1,
+        day: 2,
         part1: part1(&games),
         part2: part2(&games),
     }

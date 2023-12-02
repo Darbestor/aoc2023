@@ -7,14 +7,14 @@ fn main() {
     let args: Vec<String> = std::env::args().collect();
     match args.len() {
         1 => {
-            let results = run_all_days();
+            run_all_days();
         }
         2 => help(),
         3 => {
             let day = args[2].parse::<usize>();
             if let Ok(n) = day {
                 if n <= TOTAL_DAYS {
-                    print!("{}", run_day(n));
+                    run_day(n);
                 } else {
                     panic!("Day must be less than {TOTAL_DAYS}");
                 }
@@ -27,15 +27,18 @@ fn main() {
 }
 
 fn run_all_days() {
-    todo!()
+    for day in 1..=TOTAL_DAYS {
+        run_day(day);
+    }
 }
 
-fn run_day(day: usize) -> Answer {
-    match day {
+fn run_day(day: usize) {
+    let answer = match day {
         1 => days::day1::solve(),
         2 => days::day2::solve(),
         _ => unimplemented!(),
-    }
+    };
+    println!("{}", answer);
 }
 
 fn help() {
