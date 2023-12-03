@@ -1,6 +1,4 @@
-use days::common::Answer;
-
-const TOTAL_DAYS: usize = 2;
+const TOTAL_DAYS: usize = 3;
 pub mod days;
 
 fn main() {
@@ -36,6 +34,7 @@ fn run_day(day: usize) {
     let answer = match day {
         1 => days::day1::solve(),
         2 => days::day2::solve(),
+        3 => days::day3::solve(),
         _ => unimplemented!(),
     };
     println!("{}", answer);
