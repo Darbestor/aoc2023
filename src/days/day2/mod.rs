@@ -68,7 +68,7 @@ fn part1(input: &[Game]) -> ResultType {
     const RED_LIMIT: usize = 12;
     const GREEN_LIMIT: usize = 13;
     const BLUE_LIMIT: usize = 14;
-    ResultType::Usize(input.into_iter().fold(0, |acc, game| {
+    ResultType::Usize(input.iter().fold(0, |acc, game| {
         if game
             .sets
             .iter()
@@ -82,7 +82,7 @@ fn part1(input: &[Game]) -> ResultType {
 }
 
 fn part2(input: &[Game]) -> ResultType {
-    ResultType::Usize(input.into_iter().fold(0, |acc, game| {
+    ResultType::Usize(input.iter().fold(0, |acc, game| {
         let set = game.sets.iter().fold(GameSet::new(), |mut acc, s| {
             acc.blue = usize::max(acc.blue, s.blue);
             acc.red = usize::max(acc.red, s.red);

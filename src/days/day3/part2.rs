@@ -1,7 +1,7 @@
 use crate::days::common::ResultType;
 
 pub fn solution(input: &[&[u8]]) -> ResultType {
-    const ENGINE_PART_ASCII: u8 = '*' as u8;
+    const ENGINE_PART_ASCII: u8 = b'*';
     let mut result = 0;
 
     for (i, &line) in input.iter().enumerate() {

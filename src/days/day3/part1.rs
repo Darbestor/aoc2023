@@ -1,7 +1,7 @@
 use crate::days::common::ResultType;
 
 pub fn solution(input: &[&[u8]]) -> ResultType {
-    const DOT_ASCII: u8 = '.' as u8;
+    const DOT_ASCII: u8 = b'.';
     let mut bool_map: Vec<Vec<bool>> = input.iter().map(|x| vec![false; x.len()]).collect();
     let mut result = 0;
 
@@ -29,10 +29,8 @@ pub fn solution(input: &[&[u8]]) -> ResultType {
                     .parse::<usize>()
                     .expect("Cannot parse sequence to usize");
                 numbers = Vec::new();
-            } else {
-                if numbers.len() > 0 {
-                    numbers.clear();
-                }
+            } else if !numbers.is_empty() {
+                numbers.clear();
             }
         }
         if adjecent {

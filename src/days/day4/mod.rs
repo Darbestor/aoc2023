@@ -21,7 +21,7 @@ pub fn solve() -> Answer {
 }
 
 fn parse_input(input: &str) -> Vec<Game> {
-    const SEPARATOR: u8 = '|' as u8;
+    const SEPARATOR: u8 = b'|';
     input
         .split('\n')
         .map(|line| {
