@@ -1,4 +1,4 @@
-const TOTAL_DAYS: usize = 4;
+const TOTAL_DAYS: usize = 5;
 pub mod days;
 
 fn main() {
@@ -36,6 +36,7 @@ fn run_day(day: usize) {
         2 => days::day2::solve(),
         3 => days::day3::solve(),
         4 => days::day4::solve(),
+        5 => days::day5::solve(),
         _ => unimplemented!(),
     };
     println!("{}", answer);
