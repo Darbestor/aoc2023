@@ -9,7 +9,7 @@ pub fn solve() -> Answer {
     let input = include_str!("../../../input/day6.txt");
     let puzzle = parse_input(input);
     Answer {
-        day: 4,
+        day: 6,
         part1: ResultType::Usize(part1(&puzzle)),
         part2: ResultType::Usize(part2(&puzzle)),
     }

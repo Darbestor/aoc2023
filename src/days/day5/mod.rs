@@ -6,7 +6,7 @@ pub fn solve() -> Answer {
     let input = include_str!("../../../input/day5.txt");
 
     Answer {
-        day: 4,
+        day: 5,
         part1: ResultType::Usize(part1(input)),
         part2: ResultType::Usize(part2(input)),
     }
